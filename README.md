@@ -35,7 +35,18 @@ Werte als JSON
  , "DAT"   : "2024-03-07"
  , "BEZ"   : "Bezeichnung1"
  , "WERT"  : 1
- , "SPARK" : "0.1,0.5,0.3,0.4,0.6,0.2,0.4,0.2,1.0,0.2,0.4,0.8"}
-,{"_id":"id2","KST":"K1","DAT":"2024-03-01","BEZ":"Bezeichnung2","WERT":3,"SPARK":"1.0,0.6,0.2,0.2,0.6,0.2,0.6,0.2,0.2,0.4,0.2,0.8"}
-
+ , "SPARK" : "0.1,0.5,0.3,0.4,0.6,0.2,0.4,0.2,1.0,0.2,0.4,0.8"
+ }
+]
 ```
+### Verändern von Spaltenfunktionalität
+
+|Symbol|Bezeichnung|Beispiel
+|-|-|-|
+|WF|Workflow| . . . X . .
+|BF|Bits in Bytes| . X . X X
+|LF|Balken| X X X . . .
+|BC|BarCode| ##..##..#.#.
+|HF2|Sparkline 12| + + - - + +
+|HF3|Spark Period vs previous Period|
+|||

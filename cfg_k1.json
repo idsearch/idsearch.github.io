@@ -1,17 +1,18 @@
-{"info": "k1"
-,"comment":"k1 ist eine testtabelle " 
-,     "views" : { "show" :  { "p0" : { "col" : "_id"   , "head" : "Key"           , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p1" : { "col" : "KST"   , "head" : "Kostenstelle"  , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p2" : { "col" : "WERT"  , "head" : "Wert"          , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p3" : { "col" : "DAT"   , "head" : "Datum"         , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p4" : { "col" : "BEZ"   , "head" : "Bezeichnung"   , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p5" : { "col" : "SPARK" , "head" : "Grafik"        , "style" : "HF2", "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p6" : { "col" : "SPARK" , "head" : "Grafik"        , "style" : "HF3", "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            }
-                , "short" : { "p0" : { "col" : "_id"   , "head" : "Key"           , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p1" : { "col" : "KST"   , "head" : "Kostenstelle"  , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            , "p2" : { "col" : "WERT"  , "head" : "Wert"          , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
-                            }
+{ "info"    : "k1"
+, "comment" : "k1 ist eine testtabelle " 
+, "example" : "{_id:'id8',KST:'K2',DAT:'2024-03-06',BEZ:'Bezeichnung8',WERT:1,SPARK:'0.1,0.1,1.0,0.2,0.4,0.6,0.2,0.5,0.4,0.1,0.2,0.8'}"
+, "views"   : { "show" : { "p0" : { "col" : "_id"   , "head" : "Key"           , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         , "p1" : { "col" : "KST"   , "head" : "Kostenstelle"  , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         , "p2" : { "col" : "WERT"  , "head" : "Wert"          , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         , "p3" : { "col" : "DAT"   , "head" : "Datum"         , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         , "p4" : { "col" : "BEZ"   , "head" : "Bezeichnung"   , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         , "p5" : { "col" : "SPARK" , "head" : "Grafik"        , "style" : "HF2", "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         , "p6" : { "col" : "SPARK" , "head" : "Grafik"        , "style" : "HF3", "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                         }
+              , "short" : { "p0" : { "col" : "_id"   , "head" : "Key"           , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                          , "p1" : { "col" : "KST"   , "head" : "Kostenstelle"  , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                          , "p2" : { "col" : "WERT"  , "head" : "Wert"          , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                          }
                 }
     ,"cfg"   :  { "subheader"    : "M2 Info zur MusterTabelle"
                 , "header"       : "M1 Mustertabelle"      
