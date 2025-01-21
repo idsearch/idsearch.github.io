@@ -8,23 +8,12 @@
 */
 'use strict';
 //import { _ } from './lib.min.mjs'; //die RX passen nicht
-import { _ } from './lib.mjs';
+import { _ } from './lib.min.mjs';
 
 (async () => { document.querySelector(':root').style.setProperty('--baseHue', '340');  //farbliche Coderung der Wartezeit
-                // CLOUD Parameter zuweisen
-                _.C.APIID  = 'jxzby01v4l';
-                _.C.REGION = 'eu-west-3';
-                _.C.TABLEC  = 'CERA-SWCHE-07-config-Table';
-                _.C.TABLEI  = 'CERA-SWCHE-07-ingest-Table';
-                _.C.TASK   = 'task2';
-
+   
                //console.log(`----------START PROMISE---CFG`);
                await Promise.all( [ 'cfg_k1.json'//Config der Tabellen
-                                  , 'cfg_k2.json'
-                                  , 'cfg_projecte.json'
-                                  , 'cfg_projekte.json'
-                                  , 'cfg_details.json'
-                                //  , 'cfg_k3.json'
                                   , 'L_IC.json'  //Symbole als json
                                   ].map( async e => { //console.log(`--lesen CFG ${e} `);
                                                       const t = e.split('.')[0]
@@ -40,9 +29,6 @@ import { _ } from './lib.mjs';
                //console.log(`----------START PROMISE---TABLE`);
                await Promise.all( [ 
                                     'k1.json' //daten lesen
-                                  , 'k2.json' //daten lesen
-                                  , 'projecte.json'
-                               //   , 'k3.json' //daten lesen
                                   ]
                                   .map( async e => {//console.log(`--lesen 1 Table ${e} `);
                                                     const t = e.split('.')[0]  
@@ -51,11 +37,7 @@ import { _ } from './lib.mjs';
                                                     if(d?.length||false) { _.DATA['fs_'+ t ] = d;}
                                                     //console.log(`--lesen TABLE ${e} ${t} geschrieben `);
                                                    } ) ); 
-                                      //FÜR TABLE
-                                      const dt=await _.C.scanDB(_.C.TABLEC,{"KeyConditionExpression":"PID = :pid","ExpressionAttributeValues":{":pid":{"S":"Projekte"}}});
-                                      //console.log('WIE kommt DT an ',dt);
-                                      _.DATA['projekte'] = dt;
-                                      if(dt?.length||false) { _.DATA['fs_projekte' ] = dt;}
+                                   
                                       ; 
                //console.log(`----------END PROMISE---TABLE`);
                const ic = document.querySelector('#icons'); 
@@ -67,7 +49,7 @@ import { _ } from './lib.mjs';
                 _.D.sT('bxplt',{header:'BoxPlot',subheader:'SORTE vs. STATUS'});//Für Boxplot Vorbereiten
 */               
 
-                [ "k1","k2","projecte","projekte"]
+                [ "k1"]
                 .map(e=>{ _.GT.push(e);   //Tabelle zub Gloabl Table hizufügen, bei Änderungen der Group Values werden die entsp filter angeandt
                           _.GX[e]={};     //Analytics anlegen und leeren
                           _.D.sT(e,_.DATA['cfg_'+e]['cfg']);  //sT setTable main table p 
