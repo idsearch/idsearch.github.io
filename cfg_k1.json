@@ -1,0 +1,56 @@
+{"info": "k1"
+,"comment":"k1 ist eine testtabelle " 
+,     "views" : { "show" :  { "p0" : { "col" : "_id"   , "head" : "Key"           , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p1" : { "col" : "KST"   , "head" : "Kostenstelle"  , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p2" : { "col" : "WERT"  , "head" : "Wert"          , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p3" : { "col" : "DAT"   , "head" : "Datum"         , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p4" : { "col" : "BEZ"   , "head" : "Bezeichnung"   , "style" : ""   , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p5" : { "col" : "SPARK" , "head" : "Grafik"        , "style" : "HF2", "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p6" : { "col" : "SPARK" , "head" : "Grafik"        , "style" : "HF3", "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            }
+                , "short" : { "p0" : { "col" : "_id"   , "head" : "Key"           , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p1" : { "col" : "KST"   , "head" : "Kostenstelle"  , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            , "p2" : { "col" : "WERT"  , "head" : "Wert"          , "style" : "", "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Steuerung Über Icon" }
+                            }
+                }
+    ,"cfg"   :  { "subheader"    : "M2 Info zur MusterTabelle"
+                , "header"       : "M1 Mustertabelle"      
+                , "tableDir"     : ""
+                , "tableName"    : "k1"
+                , "t2i"          : {"_id":["tpmdone","refid"]}
+                , "link"         : "tpmdone" 
+                , "delete"       : false  
+                , "edit"         : false
+                , "pageSize"     : 12
+                , "startstop"    : false
+                , "maxPage"      : 0
+                , "page"         : 0
+ 
+                , "sort"         : ["dos","_id",false] 
+                , "searchfields" : ["BEZ","DAT"]
+                , "structure"    : ["_id","BEZ","WERT","DAT","KST","SPARK"] 
+                , "summary"      : ["WERT","KST","DAT"]
+                , "stats"        : ["WERT"] 
+                , "buzz"         : ["BEZ"]   
+                , "grpsum"       : {"c":"AMIN","s":["AF","VA"],"f":[]} 
+                , "bxplt"        : {"c":"AMIN","s":["AF","VA"],"f":[]} 
+                , "filter"       : ""
+                , "search"       : false 
+                , "searchvalues" : [] 
+                , "GF"           : {"GY":{"f":"rF","k":"DAT"},"GK":{"f":"rF","k":"KST"}}
+                
+                , "k2a"          : {"f":[],"s":["AF"]} 
+                , "k2akst"       : "KST" 
+                , "k2aid"        : "AF" 
+                , "k2adata"      : "AF"
+
+                , "jfilter"      : {}
+                , "view"         : "show"
+ 
+                , "sfilter"      : {}
+                , "lookup"       : "L_TA"
+                , "buildLookUp"  : "L_TPMAUFG" 
+                , "jjtransform"  : [["L_MTPMERST","TP","A","TPBEZ"],["L_MTPMERST","TP","AEND","AETT"],["L_MTPMERST","TP","D","DTT"]] 
+                }
+
+}
