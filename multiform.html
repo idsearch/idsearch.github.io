@@ -106,6 +106,16 @@
                                                , { l : "IV"        , v : "Intervall"                       , n : "interval"                }
                                                ]
                                  }
+                                 ,  "usecase" : { title    : "UseCaseLibrary"
+                                                , subtitle : "entwurf for DATA AI"
+                                                , info     : "maschinen status automatik hand störung keinteil puffer"
+                                                , form     : [ { l : "SHORT"     , v : "short"        , n : "short"          }
+                                                             , { l : "LONG"      , v : "long"         , n : "long"           }
+                                                             , { l : "OE"        , v : "oe"           , n : "oe"             }
+                                                             , { l : "ERSTELLER" , v : "ersteller"    , n : "erst"           }
+                                                             , { l : "Status"    , v : "A|H|S|K|P"    , n : "status"         }
+                                                             ]
+                                               }
                                  ,  "status" : { title    : "Maschine"
                                                 , subtitle : "wannwwas"
                                                 , info     : "maschinen status automatik hand störung keinteil puffer"
@@ -149,7 +159,7 @@
                                            ]
                                }
                    }
- , TABS          = ["rdf","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status"]
+ , TABS          = ["rdf","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status","usecase"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // dür dynamoDB
  , m2x  = async (m,r,a='../api/multiform') => { await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
