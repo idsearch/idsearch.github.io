@@ -158,8 +158,18 @@
                                             , { l : "value"    , v : 0                                            , n : "value"    , t : "number" }
                                            ]
                                }
+                               ,  "playbook" : { title   : "PlayBook"
+                 , subtitle : "PlaybookSatzErstellen"
+                 , info     : "neue Anforderungen tracken und verwalten und reporten"
+                 , form     : [ { l : "ID"        , v : "PLAYBOOK ID" , n : "pbid"       }
+                              , { l : "ZIEl"      , v : "Ziel"        , n : "ziel"       }
+                              , { l : "INSTRUMENT", v : "instrument"  , n : "instrument" }
+                              , { l : "ERSTELLER" , v : "ergebnis"    , n : "ergebnis"   }
+                              , { l : "DefOfDone" , v : "defofdone"   , n : "dod"        }
+                              ]
+                }
                    }
- , TABS          = ["rdf","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status","usecase"]
+ , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status","usecase"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // dür dynamoDB
  , m2x  = async (m,r,a='../api/multiform') => { await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
