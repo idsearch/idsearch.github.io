@@ -158,6 +158,29 @@
                                             , { l : "value"    , v : 0                                            , n : "value"    , t : "number" }
                                            ]
                                }
+                               ,  "callforpapers" :
+                            { title    : "CallForPapers"
+                            , subtitle : "IT_Symposium_Chemnitz"
+                            , info     : "lets_talkk_about"
+                            , form     : [ { l : "AUTOR"     , v : "author"       , n : "author"         }
+                                        , { l : "TITLE"     , v : "title"        , n : "title"          }
+                                        , { l : "ABSTRACT"  , v : "abstractMD"   , n : "abstract"       }
+                                        , { l : "OE"        , v : "oe"           , n : "oe"             }
+                                        , { l : "SESSION"   , v : "(IT,SEC,RDF)" , n : "session"        }
+                                        , { l : "ERSTELLER" , v : "callEemailetc", n : "erst"           }
+                                        , { l : "Link"      , v : "href2document", n : "doclink"        }
+                                        ]
+                            }
+                            ,  "callforpart" :
+    { title    : "CallForParticipents"
+    , subtitle : "IT_Symposium_Chemnitz"
+    , info     : "lets_connect_to_conference"
+    , form     : [ { l : "Name"      , v : "Name"         , n : "name"           }
+                 , { l : "OE"        , v : "oe"           , n : "oe"             }
+                 , { l : "TEILNEHMER", v : "callEemailetc", n : "teilnehmer"     }
+                 , { l : "INTERESSE" , v : "interests"    , n : "interests"      }
+                 ]
+    }                                     
                 ,  "playbook" : { title   : "PlayBook"
                                 , subtitle : "PlaybookSatzErstellen"
                                 , info     : "neueAnforderungenTracken"
@@ -169,7 +192,8 @@
                             ]
             }
                    }
- , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status","usecase"]
+ , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status"
+                   ,"usecase","callforpapers","callforpart"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // dür dynamoDB
  , m2x  = async (m,r,a='../api/multiform') => { await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
