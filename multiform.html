@@ -196,12 +196,12 @@
                    ,"usecase","callforpapers","callforpart"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // dür dynamoDB
- , m2x  = async (m,r,a='../api/multiform') => {const r= await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
+ , m2x  = async (m,r,a='../api/multiform') => {const x= await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
                                                            , { method : 'POST'
                                                              , body   : JSON.stringify(r)
                                                              }
                                                             )
-                                                ,j= await r.json()            ;
+                                                ,j= await x.json()            ;
                                                 return j;
                                               }
 //--------------------------------------------------------------------
