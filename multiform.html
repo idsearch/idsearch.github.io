@@ -217,10 +217,10 @@
                                                          fj['PID'] = t;
                                                          fj['_time'] = Date.now().toString();
                                                          fj['SID'  ] = Date.now().toString(35);
+                                                         document.querySelector('#info').textContent=`wait for...` 
                                                         const j = await m2x ( 'POST' , j2Dj(fj))
-                                                        //, j = await r.json()
                                                         ;
-                                                        console.log('j r',JSON.stringify(j),j.Entries[0]["EventId"],j.FailedEntryCount);//ev fehler
+                                                        //console.log('j r',JSON.stringify(j),j.Entries[0]["EventId"],j.FailedEntryCount);//ev fehler
                                                         document.querySelector('#info').textContent=`${j.FailedEntryCount===0?j.Entries[0]["EventId"]:'ERROR'} `
                                                         modal.style.display='none';
                                                        }
