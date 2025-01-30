@@ -196,11 +196,13 @@
                    ,"usecase","callforpapers","callforpart"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // dür dynamoDB
- , m2x  = async (m,r,a='../api/multiform') => { await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
+ , m2x  = async (m,r,a='../api/multiform') => {const r= await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
                                                            , { method : 'POST'
                                                              , body   : JSON.stringify(r)
                                                              }
-                                                            );
+                                                            )
+                                                j= await r.json()            ;
+                                                return j;
                                               }
 //--------------------------------------------------------------------
  ,   setModal      = (t,s,l) => { //console.log('SETMODAL');
@@ -215,10 +217,10 @@
                                                          fj['PID'] = t;
                                                          fj['_time'] = Date.now().toString();
                                                          fj['SID'  ] = Date.now().toString(35);
-                                                        const r = await m2x ( 'POST' , j2Dj(fj))
+                                                        const j = await m2x ( 'POST' , j2Dj(fj))
                                                         //, j = await r.json()
                                                         ;
-                                                        console.log('j r',JSON.stringify(r));//ev fehler
+                                                        console.log('j r',JSON.stringify(j));//ev fehler
                                                         modal.style.display='none';
                                                        }
                             btnsave.addEventListener('click',fbtnsave);
