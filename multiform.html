@@ -221,6 +221,7 @@
                                                         //, j = await r.json()
                                                         ;
                                                         console.log('j r',JSON.stringify(j),j.Entries[0]["EventId"],j.FailedEntryCount);//ev fehler
+                                                        document.querySelector('#info').textContent=`${j.FailedEntryCount===0?j.Entries[0]["EventId"]:'ERROR'} `
                                                         modal.style.display='none';
                                                        }
                             btnsave.addEventListener('click',fbtnsave);
