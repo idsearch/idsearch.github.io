@@ -29,7 +29,7 @@
 <section>
     <main></main>
  </section>
-<footer>&copy; 2025-01-30 by wolfSflow@TMI<span>irgendwas - steffens framework - with amplify</span><span>impressum | kontakt | feedback</span></footer>
+<footer>&copy; 2025-01-30 by wolfSflow@TMI<span>irgendwas - framework - with amplify|github.io|cloudfront</span><span>impressum | kontakt | feedback</span></footer>
 </body>
 <script async type="module" src="app_irgendwas.mjs"></script>
 <script>
@@ -195,7 +195,7 @@
  , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status"
                    ,"usecase","callforpapers","callforpart"]
  //--------------------------------------------------------------------
- , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // dür dynamoDB
+ , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // for dynamoDB
  , m2x  = async (m,r,a='../api/multiform') => {const x= await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
                                                            , { method : 'POST'
                                                              , body   : JSON.stringify(r)
@@ -227,7 +227,7 @@
                             btnsave.addEventListener('click',fbtnsave);
                             modal.style.display = 'block';
                           }
-, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div>${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
+, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div class=title>${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
                    }
 , setMainC = (z,l)=>{}
  ;
