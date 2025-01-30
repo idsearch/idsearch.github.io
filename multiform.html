@@ -216,8 +216,9 @@
                                                          fj['_time'] = Date.now().toString();
                                                          fj['SID'  ] = Date.now().toString(35);
                                                         const r = await m2x ( 'POST' , j2Dj(fj))
-                                                        , j = await r.json();
-                                                        console.log('j r',j);//ev fehler
+                                                        //, j = await r.json()
+                                                        ;
+                                                        console.log('j r',JSON.stringify(r));//ev fehler
                                                         modal.style.display='none';
                                                        }
                             btnsave.addEventListener('click',fbtnsave);
