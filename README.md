@@ -50,3 +50,9 @@ Werte als JSON
 |HF2|Sparkline 12| + + - - + +
 |HF3|Spark Period vs previous Period|
 |||
+
+## Multiform
+
+ein Weg, um lose gekoppelte asynchrone SDysteme zu realisieren.
+
+![alt text](image-1.png)
