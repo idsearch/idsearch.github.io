@@ -61,7 +61,8 @@
                   ,"rdf":{title:"rdf",subtitle:"RDF_Tripel_erfassen_contains_hat_type_x",info:"Subject Praedikat Objekt",form:[{l:"lRDF",v:"xcontainsy",n:"nRDF"}
                   ,{l:"lBEZ",v:"some",n:"BEZ"}]}                
                   , "abwesenheit" : { title    : "Tag_AnAbwesenheit"
-                                    , subtitle : "werwannwarum"
+                                    , icon     : "vw-visualcheck"
+                                    , subtitle : "werwanndanettda"
                                     , info     : "anwesendkrankurlaub"
                                     , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
                                                  , { l : "Name"    , v : PARAMS?.["NAME"]|| "DZEXDFY"            , n : "name"                 }
@@ -70,17 +71,18 @@
                                                  , { l : "Status"  , v : "AW|K|TU"                             , n : "state"                }
                                                  ]
                                     }
-                                    , "planung" : { title    : "Von_bis_Plan"
-                                                      , subtitle : "Urlaub_Krank_Reparatur_Sperre"
-                                                      , info     : "anwesendkrankurlaub"
-                                                      , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
-                                                                   , { l : "Name"    , v : PARAMS?.["NAME"]|| "DZEXDFY"            , n : "name"                 }
-                                                                   , { l : "StammNr" , v : "DZEXDFY"                             , n : "pkz"                  }
-                                                                   , { l : "vom"     , v : PARAMS?.["DAY"]|| "2022-07-01"          , n : "vday"   , t : "date"  }
-                                                                   , { l : "bis"     , v : PARAMS?.["DAY"]|| "2022-07-01"          , n : "bday"   , t : "date"  }
-                                                                   , { l : "Status"  , v : "AW|K|TU"                             , n : "state"                }
-                                                                   ]
-                                                      }
+                  , "planung"     : { title    : "Von_bis_Plan"
+                                    , subtitle : "Urlaub_Krank_Reparatur_Sperre"
+                                    , icon     : "vw-visualcheck"
+                                    , info     : "anwesendkrankurlaub"
+                                    , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
+                                                  , { l : "Name"    , v : PARAMS?.["NAME"]|| "DZEXDFY"            , n : "name"                 }
+                                                  , { l : "StammNr" , v : "DZEXDFY"                             , n : "pkz"                  }
+                                                  , { l : "vom"     , v : PARAMS?.["DAY"]|| "2022-07-01"          , n : "vday"   , t : "date"  }
+                                                  , { l : "bis"     , v : PARAMS?.["DAY"]|| "2022-07-01"          , n : "bday"   , t : "date"  }
+                                                  , { l : "Status"  , v : "AW|K|TU"                             , n : "state"                }
+                                                  ]
+                                    }
                                      ,  "meldung" : { title    : "IH-Meldung"
                                   , subtitle : "wannwowas"
                                   , info     : "schnelle Rückmeldung"
