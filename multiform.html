@@ -240,7 +240,7 @@
                             btnsave.addEventListener('click',fbtnsave);
                             modal.style.display = 'block';
                           }
-, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div class=title><span ><svg class="s-icon"><use href="#${l[e].icon||'vw-as'}" /></svg></span>${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
+, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div class=title><span ><svg class="icon"><use href="#${l[e].icon||'vw-as'}" /></svg></span> ${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
                    }
 , setMainC = (z,l)=>{}
  ;
