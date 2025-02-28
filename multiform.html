@@ -29,7 +29,7 @@
 <section>
     <main></main>
  </section>
-<footer>&copy; 2025-01-30 by wolfSflow@TMI<span>irgendwas - framework - with amplify|github.io|cloudfront</span><span>impressum | kontakt | feedback</span></footer>
+<footer>&copy; 2025-03-01 by wolfSflow@TMI<span>irgendwas - framework - with amplify|github.io|cloudfront</span><span>impressum | kontakt | feedback</span></footer>
 </body>
 <script async type="module" src="app_irgendwas.mjs"></script>
 <script>
@@ -47,6 +47,7 @@
  // ___________________________________________________________________
  , LDATA         = { "person"   : { title    : "Person"
                                   , subtitle : "Adresse_erfassen"
+                                  , icon     : "vw-visualcheck"
                                   , info     : "Name Vorname"
                                   , form     : [ { l : "Name"     , v : PARAMS?.["NAME"] ||"Name", n : "name"                           }
                                                , { l : "Vorname"  , v : "Vorname"      , n : "firstname"                      }
@@ -86,6 +87,7 @@
                                      ,  "meldung" : { title    : "IH-Meldung"
                                   , subtitle : "wannwowas"
                                   , info     : "schnelle Rückmeldung"
+                                      , icon     : "vw-visualcheck"
                                   , form     : [ { l : "TP"        , v : PARAMS?.["TP"]||"Technischer Platz" , n : "tpl"                    }
                                                , { l : "AF"        , v : PARAMS?.["AF"]||"Arbeitsfolge"      , n : "af"                     }
                                                , { l : "Massnahme" , v : "Massnahme"                       , n : "action"                 }
@@ -98,6 +100,7 @@
                                  }
                    ,  "verlust" : { title    : "Verlust"
                                   , subtitle : "wannwwas"
+                                      , icon     : "vw-visualcheck"
                                   , info     : "schnellerckmeldung"
                                   , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
                                                , { l : "AF"        , v : PARAMS["AF"]||"Arbeitsfolge"      , n : "af"                      }
@@ -110,6 +113,7 @@
                                  }
                                  ,  "usecase" : { title    : "UseCaseLibrary"
                                                 , subtitle : "entwurfforDATAAI"
+                                                    , icon     : "vw-visualcheck"
                                                 , info     : "maschinen status automatik hand störung keinteil puffer"
                                                 , form     : [ { l : "SHORT"     , v : "short"        , n : "short"          }
                                                              , { l : "LONG"      , v : "long"         , n : "long"           }
@@ -119,6 +123,7 @@
                                                              ]
                                                }
                                  ,  "status" : { title    : "Maschine"
+                                     , icon     : "vw-visualcheck"
                                                 , subtitle : "wannwwas"
                                                 , info     : "maschinen status automatik hand störung keinteil puffer"
                                                 , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
@@ -129,6 +134,7 @@
                                   ,"ticker" :  { title    : "Ticker"
                                  , subtitle : "Dokumenteverlinken"
                                  , info     : "ksubeachten"
+                                     , icon     : "vw-visualcheck"
                                  , form     : [ { l : "Topic"      , v : "Topic"                        , n : "topic"                  }
                                               , { l : "Name"       , v : "DemmlerFalk"                  , n : "changedby"              }
                                               , { l : "Doc"        , v : "https://example.com"          , n : "document"  , t : "url"  }
@@ -141,6 +147,7 @@
                        ,"material" :  { title    : "Ersatzteil"
                                     , subtitle : "ausbuchen"
                                     , info     : "ksubeachten"
+                                        , icon     : "vw-visualcheck"
                                     , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
                                                  , { l : "AF"        , v : PARAMS["AF"]||"Arbeitsfolge"      , n : "af"                      }
                                                  , { l : "Auftrag"   , v : PARAMS["DAY"]||"2023-01-01"       , n : "auftrag"                 }
@@ -151,6 +158,7 @@
                           }
                 , "value" :    { title    : "Istwert"
                                , subtitle : "ISTerfassen"
+                                   , icon     : "vw-visualcheck"
                                , info     : "UnfallAnwesenheitStckzahl"
                                , form     : [ { l : "Team"     , v : PARAMS["TEAM"]||"2700-103-00007-TM1"         , n : "team"                    }
                                             , { l : "KW"       , v : "KW22"                                       , n : "kw"                      }
@@ -163,6 +171,7 @@
                                ,  "callforpapers" :
                             { title    : "CallForPapers"
                             , subtitle : "IT_Symposium_Chemnitz"
+                                , icon     : "vw-visualcheck"
                             , info     : "lets_talkk_about"
                             , form     : [ { l : "AUTOR"     , v : "author"       , n : "author"         }
                                         , { l : "TITLE"     , v : "title"        , n : "title"          }
@@ -175,6 +184,7 @@
                             }
                             ,  "callforpart" :
     { title    : "CallForParticipents"
+        , icon     : "vw-visualcheck"
     , subtitle : "IT_Symposium_Chemnitz"
     , info     : "lets_connect_to_conference"
     , form     : [ { l : "Name"      , v : "Name"         , n : "name"           }
@@ -186,6 +196,7 @@
                 ,  "playbook" : { title   : "PlayBook"
                                 , subtitle : "PlaybookSatzErstellen"
                                 , info     : "neueAnforderungenTracken"
+                                    , icon     : "vw-visualcheck"
                 , form     : [ { l : "ID"        , v : "PLAYBOOKID"  , n : "pbid"       }
                             , { l : "ZIEl"      , v : "Ziel"        , n : "ziel"       }
                             , { l : "INSTRUMENT", v : "instrument"  , n : "instrument" }
@@ -229,7 +240,7 @@
                             btnsave.addEventListener('click',fbtnsave);
                             modal.style.display = 'block';
                           }
-, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div class=title>${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
+, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div class=title><span ><svg class="s-icon"><use href="#${l[e].icon||'vw-as'}" /></svg></span>${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
                    }
 , setMainC = (z,l)=>{}
  ;
