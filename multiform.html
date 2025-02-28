@@ -47,7 +47,7 @@
  // ___________________________________________________________________
  , LDATA         = { "person"   : { title    : "Person"
                                   , subtitle : "Adresse_erfassen"
-                                  , icon     : "vw-visualcheck"
+                                  , icon     : "vw-edit"
                                   , info     : "Name Vorname"
                                   , form     : [ { l : "Name"     , v : PARAMS?.["NAME"] ||"Name", n : "name"                           }
                                                , { l : "Vorname"  , v : "Vorname"      , n : "firstname"                      }
@@ -59,10 +59,10 @@
                                                , { l : "eMail"    , v : "a@b.c"        , n : "mail"        , t : "email"      }
                                               ]
                                   }
-                  ,"rdf":{title:"rdf",subtitle:"RDF_Tripel_erfassen_contains_hat_type_x",info:"Subject Praedikat Objekt",form:[{l:"lRDF",v:"xcontainsy",n:"nRDF"}
+                  ,"rdf":{title:"rdf",subtitle:"RDF_Tripel_erfassen_contains_hat_type_x",icon:"vw-gridview",info:"Subject Praedikat Objekt",form:[{l:"lRDF",v:"xcontainsy",n:"nRDF"}
                   ,{l:"lBEZ",v:"some",n:"BEZ"}]}                
                   , "abwesenheit" : { title    : "Tag_AnAbwesenheit"
-                                    , icon     : "vw-visualcheck"
+                                    , icon     : "vw-external"
                                     , subtitle : "werwanndanettda"
                                     , info     : "anwesendkrankurlaub"
                                     , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
@@ -74,7 +74,7 @@
                                     }
                   , "planung"     : { title    : "Von_bis_Plan"
                                     , subtitle : "Urlaub_Krank_Reparatur_Sperre"
-                                    , icon     : "vw-visualcheck"
+                                    , icon     : "vw-link"
                                     , info     : "anwesendkrankurlaub"
                                     , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
                                                   , { l : "Name"    , v : PARAMS?.["NAME"]|| "DZEXDFY"            , n : "name"                 }
@@ -87,7 +87,7 @@
                                      ,  "meldung" : { title    : "IH-Meldung"
                                   , subtitle : "wannwowas"
                                   , info     : "schnelle Rückmeldung"
-                                      , icon     : "vw-visualcheck"
+                                      , icon     : "vw-download"
                                   , form     : [ { l : "TP"        , v : PARAMS?.["TP"]||"Technischer Platz" , n : "tpl"                    }
                                                , { l : "AF"        , v : PARAMS?.["AF"]||"Arbeitsfolge"      , n : "af"                     }
                                                , { l : "Massnahme" , v : "Massnahme"                       , n : "action"                 }
@@ -100,7 +100,7 @@
                                  }
                    ,  "verlust" : { title    : "Verlust"
                                   , subtitle : "wannwwas"
-                                      , icon     : "vw-visualcheck"
+                                      , icon     : "vw-reload"
                                   , info     : "schnellerckmeldung"
                                   , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
                                                , { l : "AF"        , v : PARAMS["AF"]||"Arbeitsfolge"      , n : "af"                      }
@@ -113,7 +113,7 @@
                                  }
                                  ,  "usecase" : { title    : "UseCaseLibrary"
                                                 , subtitle : "entwurfforDATAAI"
-                                                    , icon     : "vw-visualcheck"
+                                                    , icon     : "vw-toggle"
                                                 , info     : "maschinen status automatik hand störung keinteil puffer"
                                                 , form     : [ { l : "SHORT"     , v : "short"        , n : "short"          }
                                                              , { l : "LONG"      , v : "long"         , n : "long"           }
@@ -123,7 +123,7 @@
                                                              ]
                                                }
                                  ,  "status" : { title    : "Maschine"
-                                     , icon     : "vw-visualcheck"
+                                     , icon     : "vw-servicebell"
                                                 , subtitle : "wannwwas"
                                                 , info     : "maschinen status automatik hand störung keinteil puffer"
                                                 , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
@@ -134,7 +134,7 @@
                                   ,"ticker" :  { title    : "Ticker"
                                  , subtitle : "Dokumenteverlinken"
                                  , info     : "ksubeachten"
-                                     , icon     : "vw-visualcheck"
+                                     , icon     : "vw-history"
                                  , form     : [ { l : "Topic"      , v : "Topic"                        , n : "topic"                  }
                                               , { l : "Name"       , v : "DemmlerFalk"                  , n : "changedby"              }
                                               , { l : "Doc"        , v : "https://example.com"          , n : "document"  , t : "url"  }
@@ -158,7 +158,7 @@
                           }
                 , "value" :    { title    : "Istwert"
                                , subtitle : "ISTerfassen"
-                                   , icon     : "vw-visualcheck"
+                                   , icon     : "vw-calendar"
                                , info     : "UnfallAnwesenheitStckzahl"
                                , form     : [ { l : "Team"     , v : PARAMS["TEAM"]||"2700-103-00007-TM1"         , n : "team"                    }
                                             , { l : "KW"       , v : "KW22"                                       , n : "kw"                      }
@@ -171,7 +171,7 @@
                                ,  "callforpapers" :
                             { title    : "CallForPapers"
                             , subtitle : "IT_Symposium_Chemnitz"
-                                , icon     : "vw-visualcheck"
+                                , icon     : "vw-task"
                             , info     : "lets_talkk_about"
                             , form     : [ { l : "AUTOR"     , v : "author"       , n : "author"         }
                                         , { l : "TITLE"     , v : "title"        , n : "title"          }
@@ -184,7 +184,7 @@
                             }
                             ,  "callforpart" :
     { title    : "CallForParticipents"
-        , icon     : "vw-visualcheck"
+        , icon     : "vw-checklist2"
     , subtitle : "IT_Symposium_Chemnitz"
     , info     : "lets_connect_to_conference"
     , form     : [ { l : "Name"      , v : "Name"         , n : "name"           }
@@ -196,7 +196,7 @@
                 ,  "playbook" : { title   : "PlayBook"
                                 , subtitle : "PlaybookSatzErstellen"
                                 , info     : "neueAnforderungenTracken"
-                                    , icon     : "vw-visualcheck"
+                                    , icon     : "vw-gears"
                 , form     : [ { l : "ID"        , v : "PLAYBOOKID"  , n : "pbid"       }
                             , { l : "ZIEl"      , v : "Ziel"        , n : "ziel"       }
                             , { l : "INSTRUMENT", v : "instrument"  , n : "instrument" }
