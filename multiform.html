@@ -204,7 +204,7 @@
                             , { l : "DefOfDone" , v : "defofdone"   , n : "dod"        }
                             ]
             }
-            ,  "project" : { title   : "New Project Idea"
+            ,  "project" : { title   : "NewProjectIdea"
                                 , subtitle : "NeueProjektIdeeErfassen"
                                 , info     : "neueProjektIdee"
                                     , icon     : "vw-factory"
@@ -229,7 +229,7 @@
             } 
                    }
  , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status"
-                   ,"usecase","callforpapers","callforpart","project"]
+                   ,"usecase","callforpapers","callforpart","project","projectdoc"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // for dynamoDB
  , m2x  = async (m,r,a='../api/multiform') => {const x= await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
