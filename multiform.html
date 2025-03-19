@@ -204,9 +204,32 @@
                             , { l : "DefOfDone" , v : "defofdone"   , n : "dod"        }
                             ]
             }
+            ,  "project" : { title   : "New Project Idea"
+                                , subtitle : "NeueProjektIdeeErfassen"
+                                , info     : "neueProjektIdee"
+                                    , icon     : "vw-factory"
+                , form     : [ { l : "ID"        , v : "PROJID"  , n : "pbid"       }
+                            , { l : "Titel"      , v : "Titel"        , n : "titel"       }
+                            , { l : "INSTRUMENT", v : "instrument"  , n : "instrument" }
+                            , { l : "ERSTELLER" , v : "ersteller"    , n : "ersteller"   }
+                         
+                            ]
+            }       
+            ,  "projectdoc" : { title   : "NewProjectDocument"
+                                , subtitle : "NeuesProjektDokumentErfassen"
+                                , info     : "neuesProjektDocument"
+                                    , icon     : "vw-factory"
+                , form     : [ { l : "ID"        , v : "PROJID"  , n : "pbid"       }
+                            , { l : "Titel"      , v : "Titel"        , n : "titel"       }
+                            , { l : "Source"      , v : "source"        , n : "Source"       }
+                            , { l : "Datum", v : "2025-01-01"  , n : "Datum" }
+                            , { l : "Status" , v : "status"    , n : "Status"   }
+                         
+                            ]
+            } 
                    }
  , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status"
-                   ,"usecase","callforpapers","callforpart"]
+                   ,"usecase","callforpapers","callforpart","project"]
  //--------------------------------------------------------------------
  , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // for dynamoDB
  , m2x  = async (m,r,a='../api/multiform') => {const x= await fetch ('https://9mi8i117f6.execute-api.eu-north-1.amazonaws.com/task2/something'
