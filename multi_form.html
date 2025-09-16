@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name= "description" content= "dTPM digital InnoFonds, Maintenance, Maßnahmen, Aufgaben, Ersatzteile, Workflow">
+    <meta name= "keywords"    content= "AWS, serverless, moduleless, analytics, multiTable">
+    <meta name= "author"      content= "Steffen Wolf">
+    <meta name= "viewport"    content= "width=device-width, initial-scale=1.0">
+	<meta property="og:title" 		content="Irgendwas" />
+    <meta property="og:description" content="Chemnitzer Irgendwas" />
+	<meta property="og:video" 		content="qsk.webm" />
+	<meta property="og:type"  		content="website" />
+	<meta property="og:image" 		content="logo_idsearch.png" />
+	<link rel="icon" type="image/png" href="logo_idsearch.png">
+    <link rel="stylesheet" href="main.min.css">
+    <title>multiform@github.io</title>
+    </head>    
+<body>
+    <!-- ICONS --><svg def id=icons></svg><!-- display:none soll nicht sichtbar sein hier sind die verwendeten ICONS aus der GroupUI -->
+    <!-- MODAL --><div class=modal><div class=modal-content><div class=modal-form><span>some</span></div><div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div></div></div><!-- bereich für modale fenster -->
+    <!-- DATAL --><div id='datalists'><datalist id='NV'><option value='N.V.'>
+        <datalist id='style'><option value='nn'>keineFunktion</option><option value='i2m'>Modal-Fenster</option><option value='uf'>FilterDimension</option><option value='BC'>BarCode</option></datalist>
+        <datalist id='media'><option value='td-hidden'>ausblenden</option><option value='th-width-3'>S</option><option value='th-width-5'>M</option><option value='th-width-8'>L</option></datalist>
+        </datalist></div><!-- dynamischer datlist bereich -->
+    <header><div><sup>NEW.IT@</sup> <strong>ShopFloor</strong></div><div>Irgendwas onGitHub (multiform API REGION PUTPATH)</div><div><span id="info">...</span><span > <svg class="s-icon"><use xlink:href="#vw-task" /></svg><svg class="s-icon"><use xlink:href="#vw-logout" /></svg> </span></div></header>
+    <nav>
+
+</nav>
+<section>
+    <main></main>
+ </section>
+<footer>&copy; 2025-09-16 by wolfSflow@TMI<span>irgendwas - framework - with amplify|github.io|cloudfront</span><span>impressum | kontakt | feedback</span></footer>
+</body>
+<script async type="module" src="app_irgendwas.mjs"></script>
+<script>
+      let fbtnsave     = async event => { console.info(`Click event fired on ${this.nodeName} Does it bubble? ${event.bubbles}`);modal.style.display='none';}
+  ;
+  const
+    modal        = document.querySelectorAll('.modal'         )[0]
+ ,  modalform    = document.querySelectorAll('.modal-form'    )[0]
+ ,  btnsave      = document.querySelectorAll('#formsave'      )[0]
+ ,  main         = document.querySelectorAll('main'           )[0]
+ //--------------------------------------------------------------------
+ // VORBELEGUNG
+// , PARAMS        = location.search.slice(1).split('&').reduce((t,e)=>{t[e.split('=')[0]]=e.split('=')[1];return t},{})
+ , PARAMS        = (location?.['search']||'?NAME=PAUL&AF=AF200&TP=2700-201-001-BZ1&DAY=2023-06-30&TEAM=FSCHICHT').slice(1).split('&').reduce((t,e)=>{t[e.split('=')[0]]=e.split('=')[1];return t},{})
+ // ___________________________________________________________________
+ , APIID   = PARAMS['APIID'   ] || `774uw904s6` //API 9mi8i117f6
+ , REGION  = PARAMS['REGION'  ] || `eu-north-1`
+ , PUTPATH = PARAMS['PUTPATH' ] || `ev2dbput`
+// , PUTTABLE= PARAMS['PUTTABLE'] || `CHUNAN1-config-Table`
+ , LDATA         = { "person"   : { title    : "Person"
+                                  , subtitle : "Adresse_erfassen"
+                                  , icon     : "vw-edit"
+                                  , info     : "Name Vorname"
+                                  , form     : [ { l : "Name"     , v : PARAMS?.["NAME"] ||"Name", n : "name"                           }
+                                               , { l : "Vorname"  , v : "Vorname"      , n : "firstname"                      }
+                                               , { l : "Strasse"  , v : "Strasse"      , n : "street"                         }
+                                               , { l : "PLZ"      , v : "09110"        , n : "postalcode"                     }
+                                               , { l : "Ort"      , v : "Chemnitz"     , n : "city"                           }
+                                               , { l : "Telefon"  , v : "Telefon"      , n : "phone"       , t : "tel"        }
+                                               , { l : "Code"     , v : "PW3432"       , n : "passwrd"     , t : "password"   }
+                                               , { l : "eMail"    , v : "a@b.c"        , n : "mail"        , t : "email"      }
+                                              ]
+                                  }
+                  ,"rdf":{title:"rdf",subtitle:"RDF_Tripel_erfassen_contains_hat_type_x",icon:"vw-gridview",info:"Subject Praedikat Objekt",form:[{l:"lRDF",v:"xcontainsy",n:"nRDF"}
+                  ,{l:"lBEZ",v:"some",n:"BEZ"}]}                
+                  , "abwesenheit" : { title    : "Tag_AnAbwesenheit"
+                                    , icon     : "vw-external"
+                                    , subtitle : "werwanndanettda"
+                                    , info     : "anwesendkrankurlaub"
+                                    , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
+                                                 , { l : "Name"    , v : PARAMS?.["NAME"]|| "DZEXDFY"            , n : "name"                 }
+                                                 , { l : "StammNr" , v : "DZEXDFY"                             , n : "pkz"                  }
+                                                 , { l : "Tag"     , v : PARAMS["DAY"]|| "2022-07-01"          , n : "day"    , t : "date"  }
+                                                 , { l : "Status"  , v : "AW|K|TU"                             , n : "state"                }
+                                                 ]
+                                    }
+                  , "planung"     : { title    : "Von_bis_Plan"
+                                    , subtitle : "Urlaub_Krank_Reparatur_Sperre"
+                                    , icon     : "vw-link"
+                                    , info     : "anwesendkrankurlaub"
+                                    , form     : [ { l : "Team"    , v : PARAMS?.["TEAM"]|| "2700-103-00007-TM1" , n : "team"                 }
+                                                  , { l : "Name"    , v : PARAMS?.["NAME"]|| "DZEXDFY"            , n : "name"                 }
+                                                  , { l : "StammNr" , v : "DZEXDFY"                             , n : "pkz"                  }
+                                                  , { l : "vom"     , v : PARAMS?.["DAY"]|| "2022-07-01"          , n : "vday"   , t : "date"  }
+                                                  , { l : "bis"     , v : PARAMS?.["DAY"]|| "2022-07-01"          , n : "bday"   , t : "date"  }
+                                                  , { l : "Status"  , v : "AW|K|TU"                             , n : "state"                }
+                                                  ]
+                                    }
+                                     ,  "meldung" : { title    : "IH-Meldung"
+                                  , subtitle : "wannwowas"
+                                  , info     : "schnelle Rückmeldung"
+                                      , icon     : "vw-download"
+                                  , form     : [ { l : "TP"        , v : PARAMS?.["TP"]||"Technischer Platz" , n : "tpl"                    }
+                                               , { l : "AF"        , v : PARAMS?.["AF"]||"Arbeitsfolge"      , n : "af"                     }
+                                               , { l : "Massnahme" , v : "Massnahme"                       , n : "action"                 }
+                                               , { l : "Bemerkung" , v : "Bemerkung"                       , n : "comment"                }
+                                               , { l : "ElMech"    , v : "elektrisch|mechanisch"           , n : "typ"                    }
+                                               , { l : "angelgt"   , v : PARAMS?.["DAY"]|| "2023-01-01"      , n : "dstart"   , t : "date"  }
+                                               , { l : "ToDoBis"   , v : PARAMS?.["DAY"]|| "2023-01-01"      , n : "dend"     , t : "date"  }
+                                               , { l : "MinToDo"   , v : 1                                 , n : "time"     , t : "range" }
+                                               ]
+                                 }
+                   ,  "verlust" : { title    : "Verlust"
+                                  , subtitle : "wannwwas"
+                                      , icon     : "vw-reload"
+                                  , info     : "schnellerckmeldung"
+                                  , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
+                                               , { l : "AF"        , v : PARAMS["AF"]||"Arbeitsfolge"      , n : "af"                      }
+                                               , { l : "Bemerkung" , v : "t.b.d"                           , n : "comment"                 }
+                                               , { l : "Katalog"   , v : "Bemerkung"                       , n : "catalog"                 }
+                                               , { l : "Datum"     , v : PARAMS["DAY"]|| "2023-01-01"      , n : "starts"   , t : "date"   }
+                                               , { l : "Minuten"   , v : 5                                 , n : "min"      , t : "number" }
+                                               , { l : "IV"        , v : "Intervall"                       , n : "interval"                }
+                                               ]
+                                 }
+                                 ,  "usecase" : { title    : "UseCaseLibrary"
+                                                , subtitle : "entwurfforDATAAI"
+                                                    , icon     : "vw-toggle"
+                                                , info     : "maschinen status automatik hand störung keinteil puffer"
+                                                , form     : [ { l : "SHORT"     , v : "short"        , n : "short"          }
+                                                             , { l : "LONG"      , v : "long"         , n : "long"           }
+                                                             , { l : "OE"        , v : "oe"           , n : "oe"             }
+                                                             , { l : "ERSTELLER" , v : "ersteller"    , n : "erst"           }
+                                                             , { l : "Status"    , v : "A|H|S|K|P"    , n : "status"         }
+                                                             ]
+                                               }
+                                 ,  "status" : { title    : "Maschine"
+                                     , icon     : "vw-servicebell"
+                                                , subtitle : "wannwwas"
+                                                , info     : "maschinen status automatik hand störung keinteil puffer"
+                                                , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
+                                                             , { l : "AF"        , v : PARAMS["AF"]||"Arbeitsfolge"      , n : "af"                      }
+                                                             , { l : "Status"    , v : "A|H|S|K|P"                       , n : "status"                  }
+                                                             ]
+                                               }
+                                  ,"ticker" :  { title    : "Ticker"
+                                 , subtitle : "Dokumenteverlinken"
+                                 , info     : "ksubeachten"
+                                     , icon     : "vw-history"
+                                 , form     : [ { l : "Topic"      , v : "Topic"                        , n : "topic"                  }
+                                              , { l : "Name"       , v : "DemmlerFalk"                  , n : "changedby"              }
+                                              , { l : "Doc"        , v : "https://example.com"          , n : "document"  , t : "url"  }
+                                              , { l : "created"    , v : PARAMS["DAY"]||"2023-01-01"    , n : "created"   , t : "date" }
+                                              , { l : "changed"    , v : PARAMS["DAY"]||"2023-01-01"    , n : "changed"   , t : "date" }
+                                              , { l : "exdate"     , v : PARAMS["DAY"]||"2023-01-01"    , n : "exdate"    , t : "date" }
+                                              , { l : "ksu"        , v : "0.1Initialklasse"             , n : "ksu"                    }
+                                              ]
+                       }
+                       ,"material" :  { title    : "Ersatzteil"
+                                    , subtitle : "ausbuchen"
+                                    , info     : "ksubeachten"
+                                        , icon     : "vw-visualcheck"
+                                    , form     : [ { l : "TP"        , v : PARAMS["TP"]||"Technischer Platz" , n : "tpl"                     }
+                                                 , { l : "AF"        , v : PARAMS["AF"]||"Arbeitsfolge"      , n : "af"                      }
+                                                 , { l : "Auftrag"   , v : PARAMS["DAY"]||"2023-01-01"       , n : "auftrag"                 }
+                                                 , { l : "Material"  , v : "MATNummer"                       , n : "af"                      }
+                                                 , { l : "Menge"     , v : 0                                 , n : "m"        , t : "number" }
+                                                 , { l : "entnommen" , v : PARAMS["DAY"]||"2023-01-01"       , n : "exdate"   , t : "date"   }
+                                                 ]
+                          }
+                , "value" :    { title    : "Istwert"
+                               , subtitle : "ISTerfassen"
+                                   , icon     : "vw-calendar"
+                               , info     : "UnfallAnwesenheitStckzahl"
+                               , form     : [ { l : "Team"     , v : PARAMS["TEAM"]||"2700-103-00007-TM1"         , n : "team"                    }
+                                            , { l : "KW"       , v : "KW22"                                       , n : "kw"                      }
+                                            , { l : "Tag"      , v : PARAMS["DAY"]||"2022-07-01"                  , n : "day"      , t : "date"   }
+                                            , { l : "zielwert" , v : "Unfall"                                     , n : "zielwert"                }
+                                            , { l : "typ"      , v : "IST"                                        , n : "typ"                     }
+                                            , { l : "value"    , v : 0                                            , n : "value"    , t : "number" }
+                                           ]
+                               }
+                               ,  "callforpapers" :
+                            { title    : "CallForPapers"
+                            , subtitle : "IT_Symposium_Chemnitz"
+                                , icon     : "vw-task"
+                            , info     : "lets_talkk_about"
+                            , form     : [ { l : "AUTOR"     , v : "author"       , n : "author"         }
+                                        , { l : "TITLE"     , v : "title"        , n : "title"          }
+                                        , { l : "ABSTRACT"  , v : "abstractMD"   , n : "abstract"       }
+                                        , { l : "OE"        , v : "oe"           , n : "oe"             }
+                                        , { l : "SESSION"   , v : "(IT,SEC,RDF)" , n : "session"        }
+                                        , { l : "ERSTELLER" , v : "callEemailetc", n : "erst"           }
+                                        , { l : "Link"      , v : "href2document", n : "doclink"        }
+                                        ]
+                            }
+                            ,  "callforpart" :
+    { title    : "CallForParticipents"
+        , icon     : "vw-checklist2"
+    , subtitle : "IT_Symposium_Chemnitz"
+    , info     : "lets_connect_to_conference"
+    , form     : [ { l : "Name"      , v : "Name"         , n : "name"           }
+                 , { l : "OE"        , v : "oe"           , n : "oe"             }
+                 , { l : "TEILNEHMER", v : "callEemailetc", n : "teilnehmer"     }
+                 , { l : "INTERESSE" , v : "interests"    , n : "interests"      }
+                 ]
+    }                                     
+                ,  "playbook" : { title   : "PlayBook"
+                                , subtitle : "PlaybookSatzErstellen"
+                                , info     : "neueAnforderungenTracken"
+                                    , icon     : "vw-gears"
+                , form     : [ { l : "ID"        , v : "PLAYBOOKID"  , n : "pbid"       }
+                            , { l : "ZIEl"      , v : "Ziel"        , n : "ziel"       }
+                            , { l : "INSTRUMENT", v : "instrument"  , n : "instrument" }
+                            , { l : "ERSTELLER" , v : "ersteller"    , n : "ersteller"   }
+                            , { l : "DefOfDone" , v : "defofdone"   , n : "dod"        }
+                            ]
+            }
+            ,  "project" : { title   : "NewProjectIdea"
+                                , subtitle : "NeueProjektIdeeErfassen"
+                                , info     : "neueProjektIdee"
+                                    , icon     : "vw-factory"
+                , form     : [ { l : "ID"        , v : "PROJID"  , n : "pbid"       }
+                            , { l : "Titel"      , v : "Titel"        , n : "titel"       }
+                            , { l : "INSTRUMENT", v : "instrument"  , n : "instrument" }
+                            , { l : "ERSTELLER" , v : "ersteller"    , n : "ersteller"   }
+                         
+                            ]
+            }       
+            ,  "projectdoc" : { title   : "NewProjectDocument"
+                                , subtitle : "NeuesProjektDokumentErfassen"
+                                , info     : "neuesProjektDocument"
+                                    , icon     : "vw-factory"
+                , form     : [ { l : "ID"        , v : "PROJID"  , n : "pbid"       }
+                            , { l : "Titel"      , v : "Titel"        , n : "titel"       }
+                            , { l : "Source"      , v : "source"        , n : "Source"       }
+                            , { l : "Datum", v : "2025-01-01"  , n : "Datum" }
+                            , { l : "Status" , v : "status"    , n : "Status"   }
+                         
+                            ]
+            } 
+                   }
+ , TABS          = ["rdf","playbook","person","meldung","value","verlust","abwesenheit","planung","ticker","material","status"
+                   ,"usecase","callforpapers","callforpart","project","projectdoc"]
+ //--------------------------------------------------------------------
+ , j2Dj = j  => Object.entries(j).reduce((T,E)=>{T[E[0]]={S:E[1]};return T},{}) // for dynamoDB
+ , m2x  = async (m,r,a='../api/multiform') => {const x= await fetch (`https://${APIID}.execute-api.${REGION}.amazonaws.com/${PUTPATH}/something`
+                                                           , { method : 'POST'
+                                                             , body   : JSON.stringify(r)
+                                                             }
+                                                            )
+                                                ,j= await x.json()            ;
+                                                return j;
+                                              }
+//--------------------------------------------------------------------
+ ,   setModal      = (t,s,l) => { //console.log('SETMODAL');
+                            const f=JSON.parse(l);
+                            modalform.innerHTML = `<header>${t}<span class=info>${s}</span><span class=close onclick="modal.style.display='none'">&times;</span></header><form id=form>`
+                                                  + f.reduce((t,e)=>t+`<div class="form-group"><label>${e.l}</label><input type="${e.t?e.t:'text'}" class="input-control"  name="${e.n}"  value="${e.v}" placeholder="${e.v}"></input></div>`,'')
+                                                  +'</form>';
+                            btnsave.removeEventListener('click',fbtnsave);
+                            fbtnsave  = async event => { const fd    = new FormData( document.querySelectorAll('#form'      )[0])              //machine date time step
+                                                         ,     fj    = Object.fromEntries([...fd.entries()])
+                                                         ;
+                                                         fj['PID'] = t;
+                                                         fj['_time'] = Date.now().toString();
+                                                         fj['SID'  ] = Date.now().toString(35);
+                                                         document.querySelector('#info').textContent=`wait for...` 
+                                                        const j = await m2x ( 'POST' , j2Dj(fj))
+                                                        ;
+                                                        //console.log('j r',JSON.stringify(j),j.Entries[0]["EventId"],j.FailedEntryCount);//ev fehler
+                                                        document.querySelector('#info').textContent=`${j.FailedEntryCount===0?j.Entries[0]["EventId"]:'ERROR'} `
+                                                        modal.style.display='none';
+                                                       }
+                            btnsave.addEventListener('click',fbtnsave);
+                            modal.style.display = 'block';
+                          }
+, setMain = (z,l) => { main.innerHTML = z.reduce((t,e,i)=>t+`<div class=flex-box onclick=setModal('${l[e].title}','${l[e].subtitle}','`+JSON.stringify(l[e].form)+`')><div class=title><span ><svg class="icon"><use href="#${l[e].icon||'vw-as'}" /></svg></span> ${l[e].title}</div><div class=info>${l[e].subtitle}</div><div class=info>${l[e].info}</div></div>`,'')
+                   }
+, setMainC = (z,l)=>{}
+ ;
+ btnsave  .addEventListener('click',      fbtnsave                          );
+setMain(TABS,LDATA);
+
+</script>
+</html>
